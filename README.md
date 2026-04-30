@@ -11,7 +11,7 @@ By integrating 3S technologies (GPS/GIS/RS) concepts with modern LLM orchestrati
 
 Tree-of-Thought (ToT) Reasoning Unlike standard linear prompting, our system implements a ToT architecture. The Reasoning Agent deconstructs vague requirements into a task dependency graph, allowing for multi-step logical deduction. This ensures that every technical decision is traceable back to the original business requirement, effectively eliminating "logical hallucinations" in long-term tasks.
 
-Multi-Agent Consensus & 博弈 (Game Theory) The system utilizes a cluster of specialized roles:
+Multi-Agent Consensus &  (Game Theory) The system utilizes a cluster of specialized roles:
 
 Architect Agent: Evaluates global coupling and structural integrity.
 
@@ -27,7 +27,9 @@ High-Token Efficiency: Optimized for large context windows, handling high-freque
 
 Quantitative Modeling: Capable of implementing complex environmental models, such as quantifying soil erosion through RUSLE parameters (A potentialvs A actual).
 
-📊 Architecture Diagram 代码段 graph TD A[User Requirement] --> B{Reasoning Engine} B -->|Task Decomposition| C[Architect Agent] B -->|Security Challenges| D[Audit Agent] C --> E[Code Generation Module] D --> E E --> F[Sandbox Execution] F -->|Stack Trace| B F -->|Success| G[Deployment Ready]
+📊 Architecture Diagram 
+代码段 
+graph TD A[User Requirement] --> B{Reasoning Engine} B -->|Task Decomposition| C[Architect Agent] B -->|Security Challenges| D[Audit Agent] C --> E[Code Generation Module] D --> E E --> F[Sandbox Execution] F -->|Stack Trace| B F -->|Success| G[Deployment Ready]
 
 ⌨️ Installation & Setup # Clone the repository git clone https://github.com/your-username/NexGen-SDLC-Agent-Orchestrator.git
 
