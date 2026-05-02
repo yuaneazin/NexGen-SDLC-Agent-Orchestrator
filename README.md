@@ -65,35 +65,46 @@ $$A = R \times K \times LS \times C \times P$$
 ---
 
 ## 🚀 5. 快速开始 (Getting Started)
-
 ### 5.1 环境配置
-为保证 ArcPy 的正常调用，建议使用 Conda 克隆 ArcGIS Pro 的默认 Python 环境：
+
 ```bash
 conda create --name geo-sentinel --clone arcgispro-py3
 conda activate geo-sentinel
 pip install -r requirements.txt
-5.2 环境变量设置
-在根目录创建 .env 文件，注入你的模型额度凭证：
+```
+
+### 5.2 环境变量设置
+
+在根目录创建 `.env` 文件，注入你的模型额度凭证：
+
+```env
 MIMO_API_KEY=your_mimo_api_key_here
 AGENT_MODE=STRICT_AUDIT
 WORKSPACE_PATH=./data/wenchuan_county
-5.3 运行沙箱测试
+```
+
+### 5.3 运行沙箱测试
+
+```bash
 python scripts/setup_env.sh
 python core/agent_manager.py --task "run_rusle_pipeline"
-🛣️ 6. 演进路线图 (Roadmap)
-[x] 构建基础的 Prompt-to-Code 工作流。
+```
 
-[x] 引入基于 ArcPy 的底层异常捕获与重试机制。
+---
 
-[ ] (WIP) 完善 Domain Auditor 的领域知识图谱规则库。
+## 🛣️ 6. 演进路线图 (Roadmap)
 
-[ ] 探索基于 Geohash 的表征重构机制（对齐 ReaGeo 等前沿学术架构），提供端到端的语义空间测试平台。
+*   [x] 构建基础的 Prompt-to-Code 工作流。
+*   [x] 引入基于 ArcPy 的底层异常捕获与重试机制。
+*   [ ] **(WIP)** 完善 `Domain Auditor` 的领域知识图谱规则库。
+*   [ ] 探索基于 Geohash 的表征重构机制（对齐 ReaGeo 等前沿学术架构），提供端到端的语义空间测试平台。
 
-🎓 7. 作者 (Author)
-Yuan Zhang
+---
 
-Chengdu University of Technology, GIS Major.
+## 🎓 7. 作者 (Author)
 
-Focused on: Spatial Data Logic, Neuro-symbolic GIS Architectures.
+**Yuan Zhang**
 
-Contact / Contributions: Please submit PRs or open issues for academic discussion.
+*   **Chengdu University of Technology**, GIS Major.
+*   **Focused on**: Spatial Data Logic, Neuro-symbolic GIS Architectures.
+*   **Contact / Contributions**: Please submit PRs or open issues for academic discussion.
